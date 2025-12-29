@@ -45,7 +45,7 @@ type cat</code></pre>
 
 
 <details class="wp-block-details"><summary>出力結果</summary>
-<pre class="wp-block-code has-background" style="background-color:#ffeeee"><code>cat is /bin/cat
+<pre class="wp-block-code has-background" style="background-color:#ffeeee"><code>cat is hashed (/bin/cat)
 cat is aliased to `echo "hello type command world"'</code></pre>
 </details>
 </div>
@@ -72,7 +72,7 @@ type cat</code></pre>
 
 
 <details class="wp-block-details"><summary>出力結果</summary>
-<pre class="wp-block-code has-background" style="background-color:#ffeeee"><code>cat is /bin/cat
+<pre class="wp-block-code has-background" style="background-color:#ffeeee"><code>cat is hashed (/bin/cat)
 cat is aliased to `echo "hello type command world"'</code></pre>
 </details>
 </div>
@@ -99,7 +99,7 @@ type cat</code></pre>
 
 
 <details class="wp-block-details"><summary>出力結果</summary>
-<pre class="wp-block-code has-background" style="background-color:#ffeeee"><code>cat is /bin/cat
+<pre class="wp-block-code has-background" style="background-color:#ffeeee"><code>cat is hashed (/bin/cat)
 cat is aliased to `echo "hello type command world"'</code></pre>
 </details>
 </div>
@@ -121,7 +121,7 @@ type cat</code></pre>
 
 
 <details class="wp-block-details"><summary>出力結果</summary>
-<pre class="wp-block-code has-background" style="background-color:#ffeeee"><code>cat is /bin/cat
+<pre class="wp-block-code has-background" style="background-color:#ffeeee"><code>cat is hashed (/bin/cat)
 cat is aliased to `echo "hello type command world"'</code></pre>
 </details>
 </div>
@@ -187,7 +187,7 @@ type cat</code></pre>
 
 
 <details class="wp-block-details"><summary>詳細</summary>
-<pre class="wp-block-code has-24292-eff-color has-text-color has-background has-1-125-rem-font-size" style="background-color:#ffeeee"><code>cat is /bin/cat
+<pre class="wp-block-code has-24292-eff-color has-text-color has-background has-1-125-rem-font-size" style="background-color:#ffeeee"><code>cat is hashed (/bin/cat)
 cat is aliased to `echo "hello type command world"'</code></pre>
 </details>
 </div>
@@ -262,7 +262,7 @@ type cat</code></pre>
 
 
 <details class="wp-block-details"><summary>詳細</summary>
-<pre class="wp-block-code has-24292-eff-color has-text-color has-background has-1-125-rem-font-size" style="background-color:#ffeeee"><code>cat is /bin/cat
+<pre class="wp-block-code has-24292-eff-color has-text-color has-background has-1-125-rem-font-size" style="background-color:#ffeeee"><code>cat is hashed (/bin/cat)
 cat is aliased to `echo "hello type command world"'</code></pre>
 </details>
 </div>
@@ -363,7 +363,7 @@ type cat</code></pre>
 
 
 <details class="wp-block-details"><summary>詳細</summary>
-<pre class="wp-block-code has-24292-eff-color has-text-color has-background has-1-125-rem-font-size" style="background-color:#ffeeee"><code>cat is /bin/cat
+<pre class="wp-block-code has-24292-eff-color has-text-color has-background has-1-125-rem-font-size" style="background-color:#ffeeee"><code>cat is hashed (/bin/cat)
 cat is aliased to `echo "hello type command world"'</code></pre>
 </details>
 </div>
@@ -385,7 +385,7 @@ type cat</code></pre>
 
 
 <details class="wp-block-details"><summary>詳細</summary>
-<pre class="wp-block-code has-24292-eff-color has-text-color has-background has-1-125-rem-font-size" style="background-color:#ffeeee"><code>cat is /bin/cat
+<pre class="wp-block-code has-24292-eff-color has-text-color has-background has-1-125-rem-font-size" style="background-color:#ffeeee"><code>cat is hashed (/bin/cat)
 cat is aliased to `echo "hello type command world"'</code></pre>
 </details>
 </div>
@@ -408,3 +408,7 @@ cat is aliased to `echo "hello type command world"'</code></pre>
 alias cat="/test/path"
 which cat</code></pre>
 </div>
+
+
+
+<p>出力結果の1行目がcat is hashed (/bin/cat)のようになっているのは、type catを実行する前にcat alias_fileでcatコマンドを使用しているので効率的にコマンドを実行できるようにキャッシュにあるパスを参照しているためです</p>
